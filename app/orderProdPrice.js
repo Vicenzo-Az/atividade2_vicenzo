@@ -3,7 +3,6 @@ import { dbConnect } from "./connetToFB.js";
 
 dbConnect()
 .then(db=>{//db contem a referencia ao banco
-    console.log(db)//mostra informacoes da conexao(pode excluir)
     //implemente aqui
     const refProdutos = fb.ref(db, 'produtos');
     const consulta = fb.query(refProdutos, fb.orderByChild('preco'));
